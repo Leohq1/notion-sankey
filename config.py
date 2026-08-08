@@ -35,3 +35,7 @@ PAGE_HEIGHT = 600
 
 # Margins inside the SVG (top, right, bottom, left) in pixels.
 MARGINS = {"top": 20, "right": 20, "bottom": 20, "left": 20}
+
+# URL for the "Refresh Data" link in the page footer.
+# Change this to your own repo's Actions workflow URL.
+REFRESH_URL = "https://github.com/Leohq1/notion-sankey/actions/workflows/refresh.yml"

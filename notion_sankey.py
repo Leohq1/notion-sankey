@@ -19,7 +19,7 @@ SETUP
 
 3. Get the database ID: open the database as a full page, copy the 32-char
    hex string from the URL (the part right before "?v=").
-   Put it in your .env file as NOTION_DATABASE_ID.
+   Put it in your .env file as NOTION_DATA_SOURCE_ID.
 
 4. Make sure your database has:
    - A multi-select property (name set in STAGES_PROPERTY below) whose
@@ -70,8 +70,8 @@ _load_dotenv()
 # ---------------------------------------------------------------------------
 
 NOTION_TOKEN = os.environ.get("NOTION_TOKEN", "")
-DATABASE_ID = os.environ.get("NOTION_DATABASE_ID", "")
-NOTION_VERSION = "2022-06-28"
+DATABASE_ID = os.environ.get("NOTION_DATA_SOURCE_ID", "")
+NOTION_VERSION = "2025-09-03"
 
 # Exact property names in your Notion database.
 STAGES_PROPERTY = "Stages Completed"   # multi-select, tags in completion order
@@ -82,8 +82,8 @@ OUTCOME_PROPERTY = "Outcome"           # text or select
 # ---------------------------------------------------------------------------
 
 def fetch_all_pages(database_id: str) -> list[dict]:
-    """Query a Notion database, following pagination, return all page objects."""
-    url = f"https://api.notion.com/v1/databases/{database_id}/query"
+    """Query a Notion database (data source), following pagination, return all page objects."""
+    url = f"https://api.notion.com/v1/data_sources/{database_id}/query"
     headers = {
         "Authorization": f"Bearer {NOTION_TOKEN}",
         "Notion-Version": NOTION_VERSION,
@@ -192,7 +192,7 @@ def print_sankeymatic(flows: dict[tuple[str, str], int]) -> None:
 def main():
     if not NOTION_TOKEN or not DATABASE_ID:
         print(
-            "Set NOTION_TOKEN and NOTION_DATABASE_ID in your .env file first "
+            "Set NOTION_TOKEN and NOTION_DATA_SOURCE_ID in your .env file first "
             "(see the SETUP comment at the top of this file).",
             file=sys.stderr,
         )
