@@ -57,7 +57,7 @@
 <body>
 <header>
   <h1>Internship Application Pipeline</h1>
-  <p>Last updated: 2026-08-13 20:26:10</p>
+  <p>Last updated: 2026-08-14 14:18:04</p>
 </header>
 <div class="container">
   <svg id="sankey"></svg>
@@ -68,7 +68,7 @@
 <script src="https://unpkg.com/d3-sankey@0.12/dist/d3-sankey.min.js"></script>
 <script>
 (function () {
-  var DATA = {"flows": [{"source": "Applied", "target": "In Progress", "value": 22}, {"source": "Applied", "target": "OA", "value": 3}, {"source": "OA", "target": "In Progress", "value": 3}, {"source": "Applied", "target": "Rejected", "value": 2}, {"source": "Applied", "target": "Interview", "value": 2}, {"source": "Interview", "target": "Ghosted", "value": 1}, {"source": "Interview", "target": "Forfeited", "value": 1}], "colors": {"Applied": "#4a9eff", "OA": "#f4a261", "Interview": "#e76f51", "Offer": "#2a9d8f", "Rejected": "#999999", "Ghosted": "#cccccc", "In Progress": "#c084fc"}, "nodeWidth": 20, "nodePadding": 12, "pageWidth": 960, "pageHeight": 600, "margins": {"top": 20, "right": 20, "bottom": 20, "left": 20}};
+  var DATA = {"flows": [{"source": "Applied", "target": "In Progress", "value": 23}, {"source": "Applied", "target": "Rejected", "value": 2}, {"source": "Applied", "target": "Interview", "value": 2}, {"source": "Applied", "target": "OA", "value": 2}, {"source": "OA", "target": "In Progress", "value": 2}, {"source": "Interview", "target": "Ghosted", "value": 1}, {"source": "Interview", "target": "Forfeited", "value": 1}], "colors": {"Applied": "#4a9eff", "OA": "#f4a261", "Interview": "#e76f51", "Offer": "#2a9d8f", "Rejected": "#999999", "Ghosted": "#cccccc", "In Progress": "#c084fc"}, "nodeWidth": 20, "nodePadding": 12, "pageWidth": 960, "pageHeight": 600, "margins": {"top": 20, "right": 20, "bottom": 20, "left": 20}};
 
   var margins = DATA.margins;
   var width  = DATA.pageWidth - margins.left - margins.right;
