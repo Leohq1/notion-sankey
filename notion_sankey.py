@@ -74,7 +74,7 @@ DATABASE_ID = os.environ.get("NOTION_DATA_SOURCE_ID", "")
 NOTION_VERSION = "2025-09-03"
 
 # Exact property names in your Notion database.
-STAGES_PROPERTY = "Stages Completed"   # multi-select, tags in completion order
+STAGES_PROPERTY = "Stages Reached"   # multi-select, tags in completion order
 OUTCOME_PROPERTY = "Outcome"           # text or select
 
 # ---------------------------------------------------------------------------
