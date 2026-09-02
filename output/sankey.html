@@ -57,7 +57,7 @@
 <body>
 <header>
   <h1>Internship Application Pipeline</h1>
-  <p>Last updated: 2026-09-01 19:26:40</p>
+  <p>Last updated: 2026-09-02 17:05:30</p>
 </header>
 <div class="container">
   <svg id="sankey"></svg>
@@ -68,7 +68,7 @@
 <script src="https://unpkg.com/d3-sankey@0.12/dist/d3-sankey.min.js"></script>
 <script>
 (function () {
-  var DATA = {"flows": [{"source": "Applied", "target": "In Progress", "value": 41}, {"source": "Applied", "target": "OA", "value": 9}, {"source": "Applied", "target": "Rejected", "value": 9}, {"source": "OA", "target": "Forfeited", "value": 4}, {"source": "OA", "target": "Rejected", "value": 3}, {"source": "Applied", "target": "Interview", "value": 1}, {"source": "Interview", "target": "Ghosted", "value": 1}, {"source": "OA", "target": "In Progress", "value": 1}, {"source": "OA", "target": "Interview", "value": 1}, {"source": "Interview", "target": "Interview 2", "value": 1}, {"source": "Interview 2", "target": "In Progress", "value": 1}], "colors": {"Applied": "#4a9eff", "OA": "#f4a261", "Interview": "#e76f51", "Offer": "#2a9d8f", "Rejected": "#999999", "Ghosted": "#cccccc", "In Progress": "#c084fc"}, "nodeWidth": 20, "nodePadding": 12, "pageWidth": 960, "pageHeight": 600, "margins": {"top": 20, "right": 20, "bottom": 20, "left": 20}};
+  var DATA = {"flows": [{"source": "Applied", "target": "In Progress", "value": 43}, {"source": "Applied", "target": "OA", "value": 9}, {"source": "Applied", "target": "Rejected", "value": 9}, {"source": "OA", "target": "Forfeited", "value": 4}, {"source": "OA", "target": "Rejected", "value": 3}, {"source": "Applied", "target": "Interview", "value": 1}, {"source": "Interview", "target": "Ghosted", "value": 1}, {"source": "OA", "target": "In Progress", "value": 1}, {"source": "OA", "target": "Interview", "value": 1}, {"source": "Interview", "target": "Interview 2", "value": 1}, {"source": "Interview 2", "target": "In Progress", "value": 1}], "colors": {"Applied": "#4a9eff", "OA": "#f4a261", "Interview": "#e76f51", "Offer": "#2a9d8f", "Rejected": "#999999", "Ghosted": "#cccccc", "In Progress": "#c084fc"}, "nodeWidth": 20, "nodePadding": 12, "pageWidth": 960, "pageHeight": 600, "margins": {"top": 20, "right": 20, "bottom": 20, "left": 20}};
 
   var margins = DATA.margins;
   var width  = DATA.pageWidth - margins.left - margins.right;
